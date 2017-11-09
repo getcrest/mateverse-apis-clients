@@ -22,7 +22,7 @@ The model_id is to tell the API which model to use for your prediction.
 #### file_paths - Path to your images/text files
 You need to give the path to the images/text files which will go inside a list. You can pass in the path to as much images/text files as you want.
 
-    Examples
+    Examples:
 
     If using an images model
     ['images/image1.jpg', 'images/image2.jpg']
@@ -33,36 +33,36 @@ You need to give the path to the images/text files which will go inside a list. 
 #### image_url(Optional) - Url to a publicly accessible image
 Provide an url of a publicly accessible image. This is an optional parameter.
 
-    Example
+    Example:
     https://c1.staticflickr.com/1/155/354864230_a8fe1fe864.jpg
 
 #### text_sample(Optional) - Sample text. Can be a word or a sentence or a paragraph
 Provide a text sample which you want to use for the prediction. This is an optional parameter.
 
-    Example
+    Example:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus neque tortor, non lobortis nibh tempor id"
 
 #### values - When you use a csv model
 Provide a valid json string containing all column names and column values.
 
-    Example
+    Example:
     "[{\"column_value\": ***, \"column_name\": \"******\"}, {\"column_value\": ***, \"column_name\": \"******\"}, {\"column_value\": ***, \"column_name\": \"******\"}, {\"column_value\": ***, \"column_name\": \"******\"}]"
 
 
 ## Run
-    Take predictions from an images model
+    Take predictions from an images model:
     python request_images.py
 
-    Take predictions from a text model
+    Take predictions from a text model:
     python request_text.py
 
-    Take predictions from a csv model
+    Take predictions from a csv model:
     python request_csv.py
 
 ## Response
 Response will be a JSON object, easily parsable in all programming languages.
 
-    Response from an images model
+    Response from an images model:
     {
        "status":"success",
        "message":"Predictions",
@@ -96,7 +96,7 @@ Response will be a JSON object, easily parsable in all programming languages.
        ]
     }
 
-    Response from a text model
+    Response from a text model:
     [
       {
         "status": "success",
@@ -110,7 +110,7 @@ Response will be a JSON object, easily parsable in all programming languages.
       }
     ]
 
-    Response from a csv model
+    Response from a csv model:
     {
        "status":"success",
        "message":[],
